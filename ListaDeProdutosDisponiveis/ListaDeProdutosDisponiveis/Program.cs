@@ -29,6 +29,13 @@ namespace ListaDeProdutosDisponiveis
                 {
                     Console.WriteLine($"Este produto nós não temos: {produtoNaoDisponivel}");
                 }
+
+                //retornar a lista de produtos disponiveis do mercado em ORDEM ALFABÉTICA
+                var produtosDisponiveisOrdenadosNome = produtosDisponiveis.OrderBy(e => e).ToList();
+                foreach(var produtoDisponivelOrdenado in produtosDisponiveisOrdenadosNome)
+                {
+                    Console.WriteLine($"Segue produto disponível: {produtoDisponivelOrdenado}");
+                }
             }catch(Exception)
             {
                 Console.WriteLine("Argumentos inválidos");
