@@ -9,7 +9,7 @@ namespace ListaAnimais
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Favor digitar o nome do animal:");
+            Console.WriteLine("Favor digitar o nome do animal para compararmos com a nossa base:");
             var nomeAnimal = Console.ReadLine();
             if(string.IsNullOrEmpty(nomeAnimal) || string.IsNullOrWhiteSpace(nomeAnimal))
             {
