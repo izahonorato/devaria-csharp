@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MinhaPrimeiraAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,14 @@ namespace MinhaPrimeiraAPI.Controllers
         [HttpGet]
         public IActionResult ObterUsuario()
         {
-            return Ok("Olá mundo. Meu primeiro endpoint C#");
+            var usuario = new Usuario()
+            {
+                Nome = "Teste",
+                Email = "teste@teste.com",
+                Senha = "teste123"
+            };
+            return Ok(usuario);
         }
+
     }
 }
